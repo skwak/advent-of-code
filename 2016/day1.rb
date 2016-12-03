@@ -101,8 +101,6 @@ directions =
     R2, L5, L5, L5, R4, L5, L4, L4, R5, L2, R1, R5, L1, L5, R4, L3, R4, L2, R3,
     R3, R3, L2, L2, L2, L1, L4, R3, L4, L2, R2, R5, L1, R2 ]
 
-spotted = false
-
 directions.each_with_index do |direction, index|
   clever_witch.move direction
 
