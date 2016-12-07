@@ -24,7 +24,7 @@ class CodeBreaker
     letters.each_with_index do |letter, index|
       if index != last_index
         store_by_frequency index
-        (@letter_hash["column_#{index}"]) << letter
+        @letter_hash["column_#{index}"] << letter
       end
     end
   end
@@ -32,12 +32,8 @@ class CodeBreaker
   def categorize_letters
     index = 0
     @input.each_line do |line|
-      if index == 0
-        sort_into_columns line
-        store_letters line
-      else
-        store_letters line
-      end
+      sort_into_columns line if index == 0
+      store_letters line
       index +=1
     end
   end
